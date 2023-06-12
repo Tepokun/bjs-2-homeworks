@@ -1,4 +1,4 @@
-use strict;
+"use strict";
 function solveEquation(a, b, c) {
   let arr = [];
   let d = b ** 2 - 4 * a * c;
@@ -15,11 +15,6 @@ function solveEquation(a, b, c) {
   
   return arr;
 }
-
-let a = 1;
-let b = 3;
-let c = 3;
-console.log(solveEquation(a, b, c));
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   
