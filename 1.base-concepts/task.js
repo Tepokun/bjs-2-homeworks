@@ -1,4 +1,5 @@
 "use strict";
+
 function solveEquation(a, b, c) {
   let arr = [];
   let d = b ** 2 - 4 * a * c;
@@ -17,5 +18,10 @@ function solveEquation(a, b, c) {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  
+  percent = (percent / 100) / 12;
+
+  let bodyCredit = amount - contribution;
+  let payment = bodyCredit * (percent + (percent / (((1 + percent) ** countMonths) - 1)))
+  let totalAmount = payment * countMonths;
+  return parseFloat(totalAmount.toFixed(2));
 }
