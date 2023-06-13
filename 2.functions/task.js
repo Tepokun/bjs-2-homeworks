@@ -28,10 +28,16 @@ function getArrayParams(...arr) {
 
 function summElementsWorker(...arr) {
 
+  if (arr.length === 0) {
+    return 0;
+  }
+
   let sum = 0;
+
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
+  
   return sum;
 }
 
@@ -40,6 +46,11 @@ function summElementsWorker(...arr) {
   //   Возвращайте разницу этих значений.
 
 function differenceMaxMinWorker(...arr) {
+
+  if (arr.length === 0) {
+    return 0;
+  }
+
   let min = Infinity;
   let max = - Infinity;
 
@@ -51,6 +62,7 @@ function differenceMaxMinWorker(...arr) {
       max = arr[i];
     }
   }
+
   return max - min;
 }
 
@@ -63,10 +75,16 @@ function differenceMaxMinWorker(...arr) {
 //  * После выполнения цикла выполняйте возвращение разницы двух элементов.
 
 function differenceEvenOddWorker(...arr) {
+
+  if (arr.length === 0) {
+    return 0;
+  }
+
   let sumEvenElement = 0;
   let sumOddElement = 0;
 
   for (let i = 0; i < arr.length; i++) {
+    
     if(Math.abs(arr[i]) % 2 === 0) {
       sumEvenElement += arr[i];
     } else {
@@ -77,8 +95,33 @@ function differenceEvenOddWorker(...arr) {
   return sumEvenElement - sumOddElement;
 }
 
+// Напишите функцию `averageEvenElementsWorker`, которая будет вычислять среднее значение чётных элементов.
+//   * Объявите две переменные, например, `sumEvenElement` и `countEvenElement`, в которых будут накапливаться сумма чётных элементов и их количество.
+//   Инициализируйте эти переменные начальными значениями — нулями.
+//   * Реализуйте цикл для перебора всех элементов массива.
+//   * При переборе каждый элемент проверяйте с помощью конструкции `if`.
+//   * Если элемент чётный, то увеличивайте одну переменную (`sumEvenElement`) на перебираемый элемент, а другую переменную (`countEvenElement`) — на единицу.
+//   * После выполнения цикла выполняйте возвращение результата деления суммы элементов на их количество.
+
 function averageEvenElementsWorker(...arr) {
 
+  if (arr.length === 0) {
+    return 0;
+  }
+
+  let sumEvenElement = 0;
+  let countEvenElement = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+
+    if(Math.abs(arr[i]) % 2 === 0) {
+      sumEvenElement += arr[i];
+    } else {
+      countEvenElement++;
+    }
+  }
+
+  return sumEvenElement / countEvenElement;
 }
 
 function makeWork (arrOfArr, func) {
