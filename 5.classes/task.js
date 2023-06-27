@@ -32,10 +32,10 @@ class PrintEditionItem {
     1008
   );
   
-  console.log(sherlock.releaseDate); // 2019
-  console.log(sherlock.state); // 100
+  console.log(sherlock.releaseDate);
+  console.log(sherlock.state);
   sherlock.fix();
-  console.log(sherlock.state); // 100
+  console.log(sherlock.state);
   
   class Magazine extends PrintEditionItem {
     constructor(name, releaseDate, pagesCount) {
