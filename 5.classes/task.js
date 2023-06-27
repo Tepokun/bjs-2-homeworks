@@ -74,8 +74,8 @@ class PrintEditionItem {
   }
   
   const picknick = new FantasticBook(
-    "Аркадий и Борис Стругацкие",
     "Пикник на обочине",
     1972,
-    168
+    168,
+    "Аркадий и Борис Стругацкие"
   );
