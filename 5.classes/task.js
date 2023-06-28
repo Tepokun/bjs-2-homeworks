@@ -40,7 +40,7 @@ class Magazine extends PrintEditionItem {
 }
 
 class Book extends PrintEditionItem {
-  constructor(name, releaseDate, pagesCount, author) {
+  constructor(author, name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount);
     this.type = "book";
     this.author = author;
@@ -48,21 +48,21 @@ class Book extends PrintEditionItem {
 }
 
 class NovelBook extends Book {
-  constructor(name, releaseDate, pagesCount, author) {
+  constructor(author, name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount, author);
     this.type = "novel";
   }
 }
 
 class FantasticBook extends Book {
-  constructor(name, releaseDate, pagesCount, author) {
+  constructor(author, name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount, author);
     this.type = "fantastic";
   }
 }
 
 class DetectiveBook extends Book {
-  constructor(name, releaseDate, pagesCount, author) {
+  constructor(author, name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount, author);
     this.type = "detective";
   }
@@ -125,9 +125,9 @@ library.addBook(
 library.addBook(new NovelBook("Герберт Уэллс", "Машина времени", 1895, 138));
 library.addBook(new Magazine("Мурзилка", 1924, 60));
 
-console.log(library.findBookBy("name", "Властелин колец")); // null
-console.log(library.findBookBy("releaseDate", 1924).name); // "Мурзилка"
+console.log(library.findBookBy("name", "Властелин колец"));
+console.log(library.findBookBy("releaseDate", 1924).name);
 
-console.log("Количество книг до выдачи: " + library.books.length); // Количество книг до выдачи: 4
+console.log("Количество книг до выдачи: " + library.books.length);
 library.giveBookByName("Машина времени");
-console.log("Количество книг после выдачи: " + library.books.length); // Количество книг после выдачи: 3
+console.log("Количество книг после выдачи: " + library.books.length);
