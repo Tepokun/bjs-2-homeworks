@@ -1,3 +1,4 @@
+// Задача 1
 class PrintEditionItem {
   constructor(name, releaseDate, pagesCount) {
     this.name = name;
@@ -61,7 +62,7 @@ class DetectiveBook extends Book {
     this.type = "detective";
   }
 }
-
+// Задача 2
 class Library {
   constructor(name) {
     this.name = name;
