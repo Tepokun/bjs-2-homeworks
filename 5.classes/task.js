@@ -26,11 +26,7 @@ class PrintEditionItem {
   }
 }
 
-const sherlock = new PrintEditionItem(
-  "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
-  2019,
-  1008
-);
+const sherlock = new PrintEditionItem("Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе", 2019, 1008);
 
 class Magazine extends PrintEditionItem {
   constructor(name, releaseDate, pagesCount) {
@@ -41,7 +37,7 @@ class Magazine extends PrintEditionItem {
 
 class Book extends PrintEditionItem {
   constructor(author, name, releaseDate, pagesCount) {
-    super(name, releaseDate, pagesCount, author);
+    super(author, name, releaseDate, pagesCount);
     this.type = "book";
     this.author = author;
   }
@@ -68,12 +64,7 @@ class DetectiveBook extends Book {
   }
 }
 
-const picknick = new FantasticBook(
-  "Пикник на обочине",
-  1972,
-  168,
-  "Аркадий и Борис Стругацкие"
-);
+const picknick = new FantasticBook("Пикник на обочине", 1972, 168, "Аркадий и Борис Стругацкие");
 
 class Library {
   constructor(name) {
@@ -104,23 +95,9 @@ class Library {
 
 const library = new Library("Библиотека имени Ленина");
 
-library.addBook(
-  new DetectiveBook(
-    "Артур Конан Дойл",
-    "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
-    2019,
-    1008
-  )
-);
+library.addBook(new DetectiveBook("Артур Конан Дойл", "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе", 2019, 1008));
 
-library.addBook(
-  new FantasticBook(
-    "Аркадий и Борис Стругацкие",
-    "Пикник на обочине",
-    1972,
-    168
-  )
-);
+library.addBook(new FantasticBook("Аркадий и Борис Стругацкие", "Пикник на обочине", 1972, 168));
 
 library.addBook(new NovelBook("Герберт Уэллс", "Машина времени", 1895, 138));
 library.addBook(new Magazine("Мурзилка", 1924, 60));
